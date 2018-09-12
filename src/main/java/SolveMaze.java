@@ -16,6 +16,17 @@ public class SolveMaze {
      * @param unused unused input arguments
      */
 
+
+    while (isFinished() == false) {
+        turnRight();
+
+        while(canMove() == false) {
+            turnLeft();
+        }
+
+        move();
+    }
+
     public static void main(final String[] unused) {
         /*
          * Create a new 10 x 10 maze. Feel free to change these values.
